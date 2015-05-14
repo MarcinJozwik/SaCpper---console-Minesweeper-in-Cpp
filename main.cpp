@@ -692,8 +692,9 @@ void move_player ()
     case 's': move_down();
               break;
     case 13:
-    case 'c': check_field();
+    case 'x': check_field();
               break;
+    case '\'':
     case 32:  place_flag();
               _beep(300,200);
               break;
@@ -800,11 +801,11 @@ void game()               //list of orders
 {
     board = new tiles * [N];
     create_final_board();
-    player = draw_point();
+    while(board[player.y][player.x].bomb != ' ') player = draw_point();
     clock_t start = clock();
-    print_board_bombs();
-    getch();
-    cls();
+    //print_board_bombs();
+    //getch();
+    //cls();
     print_all();
     CB = B;
     do
