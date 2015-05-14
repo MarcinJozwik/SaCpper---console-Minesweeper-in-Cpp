@@ -1,5 +1,4 @@
 # SaCpper---console-Minesweeper-in-Cpp
-Port of classic built-in Windows Game Minesweeper
 
 Console application in Cpp, which is a port of classic built-in Windows Game Minesweeper
 
