@@ -2,7 +2,7 @@
 
 Console application in Cpp, which is a port of classic built-in Windows Game Minesweeper
 
-![](screenshot.png?raw=true)
+![](screenshot.jpg?raw=true)
 
 Features:
 
