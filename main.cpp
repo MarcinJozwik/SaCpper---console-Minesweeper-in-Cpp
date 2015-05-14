@@ -729,7 +729,7 @@ void retry()
  char ans;
  ans = getch();
  beep();
- if (ans == 'y' || ans == 'Y' || ans == 't' || ans == 'T')
+ if (ans == 'y' || ans == 'Y' || ans == char(13))
  {
      cls();
      menu();
@@ -883,6 +883,7 @@ void outro()
     cout<<"\n\n\n\n";
     title();
     cout<<"Console Minesweeper in Cpp \n\n"<<char(174)<<" All rights reserved - Marcin Jozwik 2015\n\n\n\n\n\n\n\n\n\n"<<endl;
+    getch();
     exit(0);
 }
 int main()
