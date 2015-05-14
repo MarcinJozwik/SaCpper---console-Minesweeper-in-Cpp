@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1430767581 source:c:\users\marcin\onedrive\sacpper - console minesweeper in cpp\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<conio.h>
+	<stdlib.h>
+	<iomanip>
+	<cmath>
+	<windows.h>
+
