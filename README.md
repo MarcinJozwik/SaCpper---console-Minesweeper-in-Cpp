@@ -2,6 +2,8 @@
 
 Console application in Cpp, which is a port of classic built-in Windows Game Minesweeper
 
+![](screenshot.png?raw=true)
+
 Features:
 
 - Game taking place on dynamic two-dimensional array of structures
