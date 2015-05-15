@@ -373,10 +373,12 @@ void cout_field_bomb(point &field)      //print fields with colour of foreground
 {
   switch(board[field.y][field.x].bomb)
             {
+            case flag:   SetConsoleTextAttribute( hOut, 1 | background); break;
             case mine:   SetConsoleTextAttribute( hOut, 0 | background); break;
             case ' ':    SetConsoleTextAttribute( hOut,     background); break;
             case '1':    SetConsoleTextAttribute( hOut, 9 | background); break;
             case '2':    SetConsoleTextAttribute( hOut, 2 | background); break;
+            case 'X':    SetConsoleTextAttribute( hOut, 5 | background); break;
             case '3':    SetConsoleTextAttribute( hOut, 12 | background); break;
             case '4':    SetConsoleTextAttribute( hOut, 1 | background); break;
             case '5':    SetConsoleTextAttribute( hOut, 4 | background); break;
@@ -414,6 +416,11 @@ void print_board_bombs () //game board printing
     {
         for (object.x=0; object.x < M ;object.x++)
         {
+        if(board[object.y][object.x].hidden == flag)
+        {
+            if(board[object.y][object.x].bomb == mine) board[object.y][object.x].bomb = flag;
+            else board[object.y][object.x].bomb = 'X';
+        }
         cout_field_bomb(object);
         }
         cout<<endl;
